@@ -1,0 +1,33 @@
+public static long maxSubarraySum(int[] arr, int n) {
+
+        // write your code here
+
+        long cursum=0;
+
+        long maxsum=arr[0];
+
+        for(int i=0;i<n;i++){
+
+            cursum=cursum+arr[i];
+
+            maxsum=Math.max(maxsum,cursum);
+
+            if(cursum<0){
+
+                cursum=0;
+
+            }
+
+            if(maxsum<0){
+
+                maxsum=0;
+
+            }
+
+        }
+
+        return maxsum;
+
+ 
+
+    }
